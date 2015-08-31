@@ -1,6 +1,7 @@
 package cn.it.shop.service.impl;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import cn.it.shop.model.Category;
 import cn.it.shop.service.CategoryService;
@@ -8,6 +9,8 @@ import cn.it.shop.util.HibernateSessionFactory;
 
 public class CategoryServiceImpl implements CategoryService {
 
+	private SessionFactory sessionFactory;
+	
 	@Override
 	public void save(Category category) {
 		// TODO Auto-generated method stub

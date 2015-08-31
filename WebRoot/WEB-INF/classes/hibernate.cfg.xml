@@ -9,6 +9,7 @@
 	<property name="dialect">
 		org.hibernate.dialect.MySQLDialect
 	</property>
+	<!-- 
 	<property name="connection.url">
 		jdbc:mysql://localhost:3306/mysql
 	</property>
@@ -17,7 +18,7 @@
 	<property name="connection.driver_class">
 		com.mysql.jdbc.Driver
 	</property>
-	<property name="myeclipse.connection.profile">MySQL5.5</property>
+	 -->
 	<property name="show_sql">true</property>
 	<!-- 关闭 bean validate验证模式 -->
 	<property name="javax.persistence.validation.mode">none</property>
