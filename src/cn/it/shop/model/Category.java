@@ -14,6 +14,13 @@ public class Category implements java.io.Serializable {
 
 	// Constructors
 
+	public Category(Integer id, String type, Boolean hot) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.hot = hot;
+	}
+
 	/** default constructor */
 	public Category() {
 	}

@@ -20,6 +20,9 @@ public class SSHTest {
 	@Resource
 	private Date date;
 	
+	@Resource
+	private CategoryService categoryService;
+	
 	// 测试 Spring IOC 的开发环境
 	@Test
 	public void date(){
@@ -31,5 +34,10 @@ public class SSHTest {
 	public void hibernate(){
 		CategoryService categoryService = new CategoryServiceImpl();
 		categoryService.save(new Category("男男", true));
+	}
+	
+	@Test
+	public void hibernateAndSpring(){
+		categoryService.update(new Category(5,"男男", false));
 	}
 }

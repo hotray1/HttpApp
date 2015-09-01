@@ -11,6 +11,14 @@ public class CategoryServiceImpl implements CategoryService {
 
 	private SessionFactory sessionFactory;
 	
+	protected Session getSession(){
+		return sessionFactory.getCurrentSession();
+	}
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
 	@Override
 	public void save(Category category) {
 		// TODO Auto-generated method stub
@@ -27,5 +35,13 @@ public class CategoryServiceImpl implements CategoryService {
 			HibernateSessionFactory.closeSession();
 		}
 	}
+
+	@Override
+	public void update(Category category) {
+		// TODO Auto-generated method stub
+		getSession().update(category);
+	}
+	
+
 
 }
