@@ -8,6 +8,14 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <!-- web.xml 中的监听器的启动优先级别高于过滤器,所以监听器写在过滤器的下面也可以 -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:applicationContext-*.xml</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextCleanupListener</listener-class>
+  </listener>
   <filter>
   	<filter-name>struts2</filter-name>
   	<filter-class>
@@ -17,4 +25,5 @@
   <filter-mapping>
   	<filter-name>struts2</filter-name>
   	<url-pattern>*.action</url-pattern>
-  </filter-mapping></web-app>
+  </filter-mapping>
+  </web-app>
